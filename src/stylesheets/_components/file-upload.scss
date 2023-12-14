@@ -1,0 +1,73 @@
+/* ----------------------------- */
+/* 6j. File Upload
+/* ----------------------------- */
+
+/* Upload Button */
+.vaux-file-upload-wrapper { 
+  label {
+    display: inline-block;
+    span {
+      margin: 0;
+    }
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+/* File List */
+.vaux-file-list {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.vaux-file-item {
+  border-top: $vaux-border;
+  margin: 0;
+  padding: 1rem 1.2rem;
+  position: relative;
+  &:last-of-type {
+    border-bottom: $vaux-border;
+  }
+
+  ul.file-actions {
+    float: right;
+    list-style: none;
+    margin: 0;
+    li {
+      display: inline-block;
+      margin-bottom: 0;
+      & + li {
+        margin-left: 1.3rem;
+      }
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+
+  div.file-info {
+    display: inline-block;
+    max-width: 43%;
+    
+    span:first-of-type {
+      font-weight: bold;
+      word-wrap: break-word;
+    }
+
+    @include media($tablet-screen) {
+      max-width: 60%;
+    }
+  }
+}
+
+.vaux-file-list.no-borders .vaux-file-item {
+  border: 0;
+  padding: 0;
+}

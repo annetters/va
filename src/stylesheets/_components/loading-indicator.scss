@@ -1,0 +1,186 @@
+/* ----------------------------- */
+/* 6m. Loading Indicator
+/* ----------------------------- */
+
+$loading-indicator-bg-color: $color-cool-blue-lightest;
+$inverted-indicator-bg-color: $color-primary-darkest;
+$inline-loading-indicator-width: 36px;
+$inline-loading-indicator-height: 37px;
+
+.vaux-loading-indicator {
+  background-color: $loading-indicator-bg-color;
+  border-radius: 100%;
+  display: none;
+  height: 50px;
+  position: relative;
+  width: 50px;
+  
+  /* active state */
+  &.loading {
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+
+  /* Dark Background - Inverted Style */
+  &.indicator-inverted {
+    background-color: $inverted-indicator-bg-color;
+    .vaux-loading-indicator-icon {
+      &:before {
+        color: $loading-indicator-bg-color;
+      }
+    }
+  }
+}
+
+.vaux-loading-indicator-icon {
+  height: 100%;
+  left: 0;
+  padding: 4px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  &:before {
+    animation: fadeInDelay 1.4s infinite linear both;
+    content: $fa-star;
+    color: $inverted-indicator-bg-color;
+    display: block;
+    font-family: FontAwesome;
+    font-size: 0.9rem;
+    height: 25%;
+    margin: 0 auto;
+    width: 25%;
+  }
+
+  /* Star Animations */
+
+  &.star2 {
+    transform: rotate(45deg);
+    &:before {
+      animation-delay: -1.225s;
+    }
+  }
+  &.star3 {
+    transform: rotate(90deg);
+    &:before {
+      animation-delay: -1.05s;
+    }
+  }
+  &.star4 {
+    transform: rotate(135deg);
+    &:before {
+      animation-delay: -0.875s; 
+    }
+  }
+  &.star5 {
+    transform: rotate(180deg);
+    &:before {
+      animation-delay: -0.7s;
+    }
+  }
+  &.star6 {
+    transform: rotate(225deg);
+    &:before {
+      animation-delay: -0.525s; 
+    }
+  }
+  &.star7 {
+    transform: rotate(270deg);
+    &:before {
+      animation-delay: -0.35s; 
+    }
+  }
+  &.star8 {
+    transform: rotate(315deg);
+    &:before {
+      animation-delay: -0.175s; 
+    }
+  }
+}
+
+/* Inline - Small Style */
+.vaux-loading-indicator--inline {
+  background: none;
+  display: none;
+  height: $inline-loading-indicator-height;
+  position: relative;
+  width: $inline-loading-indicator-width;
+  &.loading {
+    display: block;
+    left: 50%;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+  .vaux-loading-indicator-icon {
+    padding: 4px;
+    &:before {
+      content: $fa-star;
+      font-family: FontAwesome;
+      font-size: 0.75rem;
+    }
+  }
+
+  /* Dark Background - Inverted Style */
+  &.indicator-inverted {
+    .vaux-loading-indicator-icon {
+      &:before {
+        color: $loading-indicator-bg-color;
+      }
+    }
+  }
+}
+
+/* Loading State for buttons */
+.vaux-element-loading {
+  color: transparent;
+  position: relative;
+  &:hover, &:focus {
+    box-shadow: none;
+    color: transparent;
+    cursor: default;
+  }
+  
+  /* ensuring the that buttons don't change color on hover when in loading state */
+  &[type="button"] {
+    &:hover, &:focus {
+      background-color: $color-primary;
+    }
+
+    &.usa-button-primary-alt {
+      &:hover, &:focus {
+        background-color: $color-primary-alt;
+      }
+    }
+
+    &.usa-button-secondary {
+      &:hover, &:focus {
+        background-color: $color-secondary;
+      }
+    }
+
+    &.usa-button-gray {
+      &:hover, &:focus {
+        background-color: $color-gray;
+      }
+    }
+
+    &.usa-button-outline {
+      &:hover, &:focus {
+        color: $color-primary;
+      }
+    }
+
+    &.usa-button-outline-inverse {
+      &:hover, &:focus {
+        color: $color-gray-lighter;
+      }
+    }
+  }
+}

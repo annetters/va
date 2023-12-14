@@ -1,0 +1,137 @@
+/* ----------------------------- */
+/* 6y. Tabs
+/* ----------------------------- */
+
+$tabs-border: $vaux-border;
+$tabs-current-color: $color-primary;
+$tabs-flexmenu-bg-color: $color-white;
+
+.vaux-tabs-nav {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1rem 0rem;
+  display: inline-block;
+  border-bottom: $tabs-border;
+  li {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.0;
+    padding: 0 1.25rem;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0.5em;
+    }
+
+    &.vaux-current-tab {
+      font-weight: 700;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: relative;
+        top: 10px;
+        display: block;
+        height: 5px;
+        background-color: $tabs-current-color;
+      }
+
+      a {
+        color: $tabs-current-color;
+      }
+    }
+
+    &:hover {
+      > a {
+        cursor: pointer;
+        color: $tabs-current-color;
+        font-weight: 700;
+      }
+    }
+
+    a {
+      color: $color-black;
+      text-decoration: none;      
+    }
+  }
+}
+
+.vaux-tabs-section {
+  display: none;
+
+  &.vaux-current-tab {
+    display: block;
+  }
+}
+
+.vaux-tabs-wrapper {
+  .vaux-button-menu-wrapper {
+    button {
+     text-align: left;
+
+      &:after {
+        position: absolute;
+        right: 15px;
+        text-align: right;
+        @include media($small-screen) {
+          position: relative;
+          right: auto;
+          top: auto;
+        }
+      }
+    }
+  }
+}
+
+/* Flex Menu */
+li.flexMenu-viewMore {
+  position: relative;
+  a .fa {
+    margin-left: 0.5rem;
+  }
+}
+
+ul.flexMenu-popup {
+  max-width: 200%;
+  min-width: 175%;
+  width: 100%;
+  padding-left: 0;
+  right: 0;
+  text-align: left;
+  background-color: $tabs-flexmenu-bg-color;
+  border-radius: 0.3rem;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
+  border: $tabs-border;
+  li {
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &.vaux-current-tab {
+      &:after {
+        content: none;
+      }
+    }
+  }
+  a {
+    color: $button-menu-link-color;
+    display: block;
+    text-decoration: none;
+    line-height: 1;
+    padding: $button-menu-link-padding;
+    &:hover {
+      background-color: $button-menu-hover;
+    }
+  }
+}
+
+/* Fixing the placement of the flexmenu dropdown on mobile phones where the More button is the only thing visibile for tab navigation */
+.vaux-tabs-nav .flexMenu-viewMore:first-child .flexMenu-popup {
+  left: 0;
+}

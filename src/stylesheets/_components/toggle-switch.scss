@@ -1,0 +1,95 @@
+/* ----------------------------- */
+/* 6z. Toggle Switch
+/* ----------------------------- */
+
+
+$toggle-switch-color: $color-gray-lightest;
+$toggle-switch-slide-color: $color-gray-light;
+$toggle-switch-active-color: $color-primary;
+$toggle-switch-active-slide-color: $color-gray-cool-light;
+$toggle-switch-box-shadow: 0 0 4px 0 rgba($color-black, 0.5);
+$toggle-switch-width: 36px;
+$toggle-switch-active: $toggle-switch-width - 20;
+
+.vaux-toggle-switch {
+  margin-top: 3rem;
+  input {
+    position: absolute;
+    margin-left: -9999px;
+
+    & + label {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      outline: none;
+      user-select: none;
+      padding: 2px;
+      width: $toggle-switch-width;
+      height: 14px;
+      background-color: $toggle-switch-slide-color;
+      border-radius: 60px;
+
+      &:before, &:after {
+        display: block;
+        position: absolute;
+        content: "";
+      }
+
+      &:before {
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        border-radius: 60px;
+        transition: background 0.4s;
+        background: none;
+        box-shadow: none;
+        content: '';
+        display: inline-block;
+        height: auto;
+        line-height: auto;
+        margin-right: auto;
+        text-indent: none;
+        vertical-align: middle\0;
+        width: auto;
+      }
+
+      &:after {
+        width: 20px;
+        height: 20px;
+        top: -3px;
+        left: 0;
+        background-color: $toggle-switch-color;
+        border-radius: 100%;
+        box-shadow: $toggle-switch-box-shadow;
+        transition: margin 0.4s;
+      }
+    }
+
+    &:checked + label {
+      &:before {
+        background: none;
+        background-color: $toggle-switch-active-slide-color;
+        box-shadow: none;
+      }
+      &:after {
+        margin-left: $toggle-switch-active;
+        background-color: $toggle-switch-active-color;
+      }
+    }
+  }
+
+  span {
+    display: inline-block;
+    line-height: 14px;
+    vertical-align: top;
+    margin-left: 30px;
+  }
+
+  & + .vaux-toggle-switch {
+    margin-top: 1.5rem;
+  }
+
+}
+
+

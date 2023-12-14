@@ -1,0 +1,111 @@
+<!-- SASS: src/stylesheets/_components/cards.scss -->
+
+<h6>Linked Card</h6>
+<a href="#" class="vaux-card vaux-card--stat">
+  <h1 class="vaux-card-title">Blood Pressure</h1>
+  <div class="vaux-card-content">
+    <div class="card-stat">
+      <span>100/60</span>
+      <span class="stat-unit">mmHg</span>
+    </div>
+    <p class="card-stat-updated">Last updated: 07/21/17</p>
+  </div>
+</a>
+
+<h6>Static Card</h6>
+<div class="vaux-card vaux-card--stat vaux-card--stat-static">
+  <h1 class="vaux-card-title">Blood Pressure</h1>
+  <div class="vaux-card-content">
+    <div class="card-stat">
+      <span>100/60</span>
+      <span class="stat-unit">mmHg</span>
+    </div>
+    <p class="card-stat-updated">Last updated: 07/21/17</p>
+  </div>
+</div>
+
+<h6>Examples of grid layout with linked cards</h6>
+<div class="usa-grid vaux-card-row">
+  <div class="usa-width-one-third">
+    <a href="#" class="vaux-card vaux-card--stat">
+      <h1 class="vaux-card-title">Blood Pressure</h1>
+      <div class="vaux-card-content">
+        <div class="card-stat">
+          <span>100/60</span>
+          <span class="stat-unit">mmHg</span>
+        </div>
+        <p class="card-stat-updated">Last updated: 07/21/17</p>
+      </div>
+    </a>
+  </div>
+  <div class="usa-width-one-third">
+    <a href="#" class="vaux-card vaux-card--stat">
+      <h1 class="vaux-card-title">Weight</h1>
+      <div class="vaux-card-content">
+        <div class="card-stat">
+          <span>89</span>
+          <span class="stat-unit">lbs</span>
+        </div>
+        <p class="card-stat-updated">Last updated: 07/21/17</p>
+      </div>
+    </a>
+  </div>
+  <div class="usa-width-one-third">
+    <a href="#" class="vaux-card vaux-card--stat">
+      <h1 class="vaux-card-title">Glucose</h1>
+      <div class="vaux-card-content">
+        <div class="card-stat">
+          <span>250</span>
+          <span class="stat-unit">mh/dl</span>
+        </div>
+        <p class="card-stat-updated">Last updated: 07/21/17</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<h6>Examples of grid layout with static cards</h6>
+<div class="usa-grid vaux-card-row">
+  <div class="usa-width-one-third">
+    <div class="vaux-card vaux-card--stat vaux-card--stat-static">
+      <h1 class="vaux-card-title">Blood Pressure</h1>
+      <div class="vaux-card-content">
+        <div class="card-stat">
+          <span>100/60</span>
+          <span class="stat-unit">mmHg</span>
+        </div>
+        <p class="card-stat-updated">Last updated: 07/21/17</p>
+      </div>
+    </div>
+  </div>
+  <div class="usa-width-one-third">
+    <div href="#" class="vaux-card vaux-card--stat vaux-card--stat-static">
+      <h1 class="vaux-card-title">Weight</h1>
+      <div class="vaux-card-content">
+        <div class="card-stat">
+          <span>89</span>
+          <span class="stat-unit">lbs</span>
+        </div>
+        <p class="card-stat-updated">Last updated: 07/21/17</p>
+      </div>
+    </div>
+  </div>
+  <div class="usa-width-one-third">
+    <div href="#" class="vaux-card vaux-card--stat vaux-card--stat-static">
+      <h1 class="vaux-card-title">Glucose</h1>
+      <div class="vaux-card-content">
+        <div class="card-stat">
+          <span>250</span>
+          <span class="stat-unit">mh/dl</span>
+        </div>
+        <p class="card-stat-updated">Last updated: 07/21/17</p>
+      </div>
+    </div>
+</div>
+
+<style scoped>
+  .usa-grid.vaux-card-row {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+  }
+</style>

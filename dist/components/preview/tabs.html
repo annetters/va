@@ -1,0 +1,73 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon.png">
+      <script src="https://use.fontawesome.com/73d8858120.js"></script>
+      <link rel="stylesheet" href="../../css/main.min.css">
+      <title>VA Pattern Library | Tabs Component Preview</title>
+      <script src="http://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+
+    <div class="usa-grid" style="padding: 2em">
+      <div class="usa-width-one-whole">
+        <!-- SASS: src/stylesheets/_components/tabs.scss -->
+<!-- JS: src/js/tabs.js -->
+<!-- Vendor JS: src/js/_vendor/flexmenu.js -->
+
+<div class="vaux-tabs-wrapper" data-tabs-trigger>
+  <ul class="vaux-tabs-nav" data-tabs-navigation role="tablist">
+    <li class="vaux-current-tab" role="tab" aria-selected="true"><a href="#one" id="testOne" aria-controls="one">Section One</a></li>
+    <li role="tab" aria-selected="false"><a href="#two" id="testTwo" aria-controls="two">Section Two</a></li>
+    <li role="tab" aria-selected="false"><a href="#three" id="testThree" aria-controls="three">Section Three</a></li>
+    <li role="tab" aria-selected="false"><a href="#four" id="testFour" aria-controls="four">Section Four</a></li>
+    <li role="tab" aria-selected="false"><a href="#ten" id="testTen" aria-controls="ten">Section Five</a></li>
+    <li role="tab" aria-selected="false"><a href="#eleven" id="testEleven" aria-controls="eleven">Section Six</a></li>
+  </ul>
+
+  <div id="one" class="vaux-tabs-section vaux-current-tab" role="tabpanel" aria-hidden="false" tabindex="0" aria-labelledby="testOne">
+    <h3>This is section one.</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum vitae eos eligendi dolorem laudantium minima in eum sunt unde quos?</p>
+    <button>Button</button>
+  </div>
+
+  <div id="two" class="vaux-tabs-section" role="tabpanel" aria-hidden="true" tabindex="0" aria-labelledby="testTwo">
+    <h3>This is section two.</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, dolore molestias dolores provident veritatis totam laudantium reprehenderit illum quibusdam atque!</p>
+    <a href="#">Link</a>
+  </div>
+
+  <div id="three" class="vaux-tabs-section" role="tabpanel" aria-hidden="true" tabindex="0" aria-labelledby="testThree" data-tab-selected="true">
+    <h3>This is section three.</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ratione nemo rerum, corrupti voluptatum expedita ipsam neque earum cum sunt.</p>
+    <button>Button</button>
+    <a href="#">Link</a>
+  </div>
+
+  <div id="four" class="vaux-tabs-section" role="tabpanel" aria-hidden="true" tabindex="0" aria-labelledby="testFour">
+    <h3>This is section four.</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ratione nemo rerum, corrupti voluptatum expedita ipsam neque earum cum sunt.</p>
+  </div>
+
+  <div id="ten" class="vaux-tabs-section" role="tabpanel" aria-hidden="true" tabindex="0" aria-labelledby="testTen">
+    <h3>This is section five.</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ratione nemo rerum, corrupti voluptatum expedita ipsam neque earum cum sunt.</p>
+  </div>
+
+  <div id="eleven" class="vaux-tabs-section" role="tabpanel" aria-hidden="true" tabindex="0" aria-labelledby="testEleven">
+    <h3>This is section six.</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ratione nemo rerum, corrupti voluptatum expedita ipsam neque earum cum sunt.</p>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <script src="../../js/_vendor/vendor.min.js"></script>
+    <script src="../../js/main.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+
+
+<!-- SASS: src/stylesheets/_components/navigation.scss -->
+<!-- JS: src/js/navigation.js -->
+<!-- Vendor JS: src/js/_vendor/ml-menu.js-->
+
+<div class="vaux-main-nav">
+  <!-- Menu Button -->
+  <button id="navOpenBtn" class="usa-menu-btn" aria-label="Open Menu">Menu<i class="fa fa-bars" aria-hidden="true"></i></button>
+
+  <nav id="mpNavMenu" class="vaux-nav-menu-wrapper">
+    <!-- Nav Header Bar -->
+    <div class="usa-navbar">
+      <button class="vaux-menu-back" aria-label="Go back" aria-hidden="true">Back</button>
+      <button id="navCloseBtn" class="usa-nav-close">Close</button>
+    </div>
+
+     <div class="vaux-nav-menus">
+        <!-- Main Menu -->
+        <ul data-menu="main" class="usa-sidenav-list" tabindex="-1" role="menu" aria-label="Main Menu" aria-hidden="false">
+          <!-- Search Input -->
+          <form class="usa-search usa-search-small">
+            <div role="search">
+              <label class="usa-sr-only" for="search-field-small">Search small</label>
+              <input id="search-field-small" type="search" name="search">
+              <button type="submit"><span class="usa-sr-only">Search</span></button>
+            </div>
+          </form>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Section One</a></li>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" href="#">Section Two</a></li>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">Section Three</a></li>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" href="#">Section Four</a></li>
+        </ul>
+        <!-- Submenu 1 -->
+        <ul data-menu="submenu-1" id="submenu-1" class="usa-sidenav-list" tabindex="-1" role="menu" aria-label="Section Title" aria-hidden="true">
+          <h3>Section Title</h3>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" href="#">Subsection Title</a></li>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" href="#">Subsection Title</a></li>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" data-submenu="submenu-1-1" aria-owns="submenu-1-1"  href="#">Subsection Title</a></li>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" href="#">Subsection Title</a></li>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" href="#">Subsection Title</a></li>
+        </ul>
+        <!-- Submenu 1-1 -->
+        <ul data-menu="submenu-1-1" id="submenu-1-1" class="usa-sidenav-list" tabindex="-1" role="menu" aria-label="Subsection Title" aria-hidden="true">
+          <h3>Subsection Title</h3>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" href="#">Grandchild Title</a></li>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" href="#">Grandchild Title</a></li>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" href="#">Grandchild Title</a></li>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" href="#">Grandchild Title</a></li>
+        </ul>
+        <!-- Submenu 2 -->
+        <ul data-menu="submenu-2" id="submenu-2" class="usa-sidenav-list" tabindex="-1" role="menu" aria-label="Section Title" aria-hidden="true">
+          <h3>Section Title</h3>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" href="#">Subsection Title</a></li>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" href="#">Subsection Title</a></li>
+        </ul>
+
+        <!-- Switch Apps Menu -->
+        <ul data-menu="switch-apps" class="application-menu usa-sidenav-list" tabindex="-1" role="menu" aria-label="Application Menu" aria-hidden="false">          
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" data-submenu="appmenu-1" aria-owns="appmenu-1" href="#"><i class="fa fa-th" aria-hidden="true"></i>Switch App</a></li>
+          <li class="vaux-menu-item" role="menuitem"><a class="vaux-menu-link" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Sign Out</a></li>
+        </ul>
+        <!-- Switch Apps Submenu -->
+        <ul data-menu="appmenu-1" id="appmenu-1" class="switch-apps-submenu usa-sidenav-list" tabindex="-1" role="menu" aria-label="Section Title" aria-hidden="true">
+          <h3>Switch Application</h3>
+          <li class="vaux-menu-item" role="menuitem">
+            <a class="vaux-menu-link" href="#">
+              <img src="/img/logo-App-MyVaHealth.png" alt="MyVAHealth Logo">
+              <div>
+              <h5>MyVAHealth</h5>
+              <p>Manage healthcare contacts and export medical records.</p>
+              </div>
+            </a>
+          </li>
+          <li class="vaux-menu-item" role="menuitem">
+            <a class="vaux-menu-link" href="#">
+              <img src="/img/logo-App-Caring4Women-Veterans.png" alt="Caring4Women Veterans Logo">
+              <div>
+              <h5>MyVAHealth</h5>
+              <p>Manage healthcare contacts and export medical records.</p>
+              </div>
+            </a>
+          </li>
+          <li class="vaux-menu-item" role="menuitem">
+            <a class="vaux-menu-link" href="#">
+              <img src="/img/logo-App-Ask-A-Pharmacist.png" alt="App Ask A Pharmacist">
+              <div>
+              <h5>MyVAHealth</h5>
+              <p>Manage healthcare contacts and export medical records.</p>
+              </div>
+            </a>
+          </li>
+          <li class="vaux-menu-item" role="menuitem">
+            <a class="vaux-menu-link" href="#">
+              <img src="/img/logo-App-Antibiogram.png" alt="Antibiogram Logo">
+              <div>
+              <h5>MyVAHealth</h5>
+              <p>Manage healthcare contacts and export medical records.</p>
+              </div>
+            </a>
+          </li>
+          <li class="vaux-menu-item" role="menuitem">
+            <a class="vaux-menu-link" href="#">
+              <img src="/img/logo-App-MyVaHealth.png" alt="MyVAHealth Logo">
+              <div>
+              <h5>MyVAHealth</h5>
+              <p>Manage healthcare contacts and export medical records.</p>
+              </div>
+            </a>
+          </li>
+          <li class="vaux-menu-item" role="menuitem">
+            <a class="vaux-menu-link" href="#">
+              <img src="/img/logo-App-Caring4Women-Veterans.png" alt="Caring4Women Veterans Logo">
+              <div>
+              <h5>MyVAHealth</h5>
+              <p>Manage healthcare contacts and export medical records.</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  
+</div>

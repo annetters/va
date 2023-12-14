@@ -1,0 +1,25 @@
+/* ----------------------------- */
+/* 6c. Buttons
+/* ----------------------------- */
+
+/* Buttons w/ Icons */
+.vaux-button-icon {
+  .fa {
+    margin-right: 5px;
+  }
+}
+
+.button_wrapper {
+  clear: both;
+  display: table;
+  margin-left: -1rem;
+  padding: 0 1rem;
+}
+
+.button_wrapper_dark {
+  background: #323a45;
+
+  button:last-child {
+    margin-right: 0;
+  }
+}

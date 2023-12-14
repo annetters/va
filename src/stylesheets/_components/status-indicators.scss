@@ -1,0 +1,95 @@
+/* ----------------------------- */
+/* 6w. Status Indicators
+/* ----------------------------- */
+
+.usa-label,
+.usa-label-big {
+  background-color: $color-primary;
+  color: $color-white;
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.3rem 0.7rem;
+  text-transform: initial;
+}
+
+/* Color variations */
+.usa-label,
+.usa-label-big {
+  &.usa-label-primary-darker {
+    background-color: $color-primary-darker;
+  }
+  &.usa-label-primary-darkest {
+    background-color: $color-primary-darkest;
+  }
+
+  &.usa-label-primary-alt {
+    background-color: $color-primary-alt;
+  }
+  &.usa-label-primary-alt-dark {
+    background-color: $color-primary-alt-dark;
+  }
+  &.usa-label-primary-alt-darkest {
+    background-color: $color-primary-alt-darkest;
+  }
+
+  &.usa-label-secondary {
+    background-color: $color-secondary;
+  }
+  &.usa-label-secondary-dark {
+    background-color: $color-secondary-dark;
+  }
+  &.usa-label-secondary-darkest {
+    background-color: $color-secondary-darkest;
+  }
+
+  &.usa-label-gray-dark {
+    background-color: $color-gray-dark;
+  }
+  &.usa-label-gray {
+    background-color: $color-gray;
+  }
+  &.usa-label-gray-medium {
+    background-color: $color-gray-medium;
+  }
+
+  &.usa-label-gray-warm-dark {
+    background-color: $color-gray-warm-dark;
+  }
+
+  &.usa-label-purple {
+    background-color: $color-visited;
+  }
+
+  &.usa-label-gold {
+    background-color: $color-gold;
+  }
+  &.usa-label-gold-light {
+    background-color: $color-gold-light;
+  }
+
+  &.usa-label-green {
+    background-color: $color-green;
+  }
+  &.usa-label-green-light {
+    background-color: $color-green-light;
+  }
+
+  &.usa-label-cool-blue {
+    background-color: $color-cool-blue;
+  }
+  &.usa-label-cool-blue-light {
+    background-color: $color-cool-blue-light;
+  }
+  &.usa-label-cool-blue-lighter {
+    background-color: $color-cool-blue-lighter;
+  }
+  &.usa-label-cool-blue-lightest {
+    background-color: $color-cool-blue-lightest;
+  }
+
+  &.usa-label-outline {
+    background-color: $color-white;
+    box-shadow: inset 0 0 0 2px $color-primary;
+    color: $color-primary;
+  }
+}

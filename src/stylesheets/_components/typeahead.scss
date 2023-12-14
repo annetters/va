@@ -1,0 +1,67 @@
+/* ----------------------------- */
+/* 6aa. Typeahead Input
+/* ----------------------------- */
+
+/* Adjusting Twitter Typeahead styles */
+$typeahead-menu-background-color: $color-white;
+$typeahead-menu-border: $vaux-border;
+$typeahead-menu-hover: $color-gray-lighter;
+$typeahead-menu-link-color: $color-black;
+$typeahead-menu-link-padding: 1rem 1rem;
+$typeahead-menu-group-label-color: $color-gray;
+
+.twitter-typeahead {
+  width: 100%;
+
+  .tt-menu {
+    background-color: $typeahead-menu-background-color;
+    border: $typeahead-menu-border;
+    border-radius: $vaux-border-radius;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
+    margin: 0 0 12px;
+    max-width: 100%;
+    min-width: 44%;
+    position: absolute;
+    width: 100%;
+    z-index: 500;
+    .tt-suggestion {
+      color: $typeahead-menu-link-color;
+      display: block;
+      line-height: 1;
+      list-style: none;
+      font-size: 1.7rem;
+      font-weight: bold;
+      padding: $typeahead-menu-link-padding;
+      text-decoration: none;
+      &:hover {
+        background-color: $typeahead-menu-hover;
+      }
+      .tt-highlight {
+        font-weight: 500;
+      }
+    }
+
+    .tt-cursor {
+        background-color: $typeahead-menu-hover;
+      }
+
+    @include media($small-screen) {
+      width: auto;
+    }
+  }
+
+  .vaux-typeahead-menu_group.show:not(:first-of-type) {
+    border-top: $typeahead-menu-border;
+  }
+
+  .vaux-typeahead-menu_group-label {
+    color: $typeahead-menu-group-label-color;
+    display: block;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    padding: $typeahead-menu-link-padding;
+    padding-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
+
+}

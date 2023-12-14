@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="67px" height="35px" viewBox="0 0 67 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>logo@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Playground" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header-with-Logo/Image" transform="translate(-13.000000, -40.000000)">
+            <g id="logo" transform="translate(12.000000, 35.000000)">
+                <text id="PV-|-RT" font-family="SourceSansPro-Bold, Source Sans Pro" font-size="23.4146341" font-weight="bold">
+                    <tspan x="0" y="23" fill="#FFFFFF">PV</tspan>
+                    <tspan x="26.9736585" y="23" font-family="SourceSansPro-Regular, Source Sans Pro" font-weight="normal" fill="#FFFFFF"> | </tspan>
+                    <tspan x="41.982439" y="23" fill="#0071BB">RT</tspan>
+                </text>
+                <polygon id="Fill-23" fill="#FAC922" points="20.9756098 33.1707317 22.0309274 35.4182494 24.3902439 35.779268 22.6827164 37.5295002 23.086245 40 20.9756098 38.8328835 18.8653953 40 19.2685031 37.5295002 17.5609756 35.779268 19.9207129 35.4182494"></polygon>
+                <polygon id="Fill-24" fill="#FAC922" points="31.7071067 33.1707317 32.7624893 35.4182494 35.1219512 35.779268 33.4143185 37.5295002 33.817872 40 31.7071067 38.8328835 29.5963414 40 29.9998948 37.5295002 28.2926829 35.779268 30.6521448 35.4182494"></polygon>
+                <polygon id="Fill-25" fill="#FAC922" points="41.4634146 33.1707317 42.5187322 35.4182494 44.8780488 35.779268 43.1705213 37.5295002 43.5740499 40 41.4634146 38.8328835 39.3532002 40 39.756308 37.5295002 38.0487805 35.779268 40.4085178 35.4182494"></polygon>
+                <polygon id="Fill-25-Copy" fill="#FAC922" points="52.195122 33.1707317 53.2504396 35.4182494 55.6097561 35.779268 53.9022286 37.5295002 54.3057572 40 52.195122 38.8328835 50.0849075 40 50.4880153 37.5295002 48.7804878 35.779268 51.1402251 35.4182494"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

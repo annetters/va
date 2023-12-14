@@ -1,0 +1,11 @@
+/* ----------------------------- */
+/* 6l. Load More
+/* ----------------------------- */
+
+.vaux-sectioned-content {
+  section:not(:first-of-type) {
+    display: none;
+    overflow: auto;
+  }
+}
+

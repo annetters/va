@@ -1,0 +1,23 @@
+/* ----------------------------- */
+/* 4c. Lists
+/* ----------------------------- */
+
+dl {
+  margin-bottom: 1em;
+  padding-left: 1.94em;
+
+  dd {
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+  }
+}    
+
+h1 + dl,
+h2 + dl,
+h3 + dl,
+h4 + dl,
+h5 + dl,
+h6 + dl,
+p + dl {
+  margin-top: 0;
+}

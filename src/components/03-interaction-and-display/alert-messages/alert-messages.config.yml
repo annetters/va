@@ -1,0 +1,5 @@
+status: ready
+preview: '@preview-full-width'
+variants:
+  - name: 'default'
+    label: 'Success'

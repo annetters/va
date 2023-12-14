@@ -1,0 +1,144 @@
+/* ----------------------------- */
+/* 6d. Button Menus
+/* ----------------------------- */
+
+$button-menu-background-color: $color-white;
+$button-menu-border: $vaux-border;
+$button-menu-hover: $color-gray-lighter;
+$button-menu-link-color: $color-black;
+$button-menu-link-padding: 1rem 1rem;
+$button-menu-group-label-color: $color-gray;
+
+.vaux-button-menu-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+
+  &.align-menu-right {
+    text-align: right;
+    .vaux-button-menu {
+      right: 0;
+      text-align: left;
+    }
+  }
+
+  button {
+    line-height: 1.06;
+    margin-right: 0;
+    margin-bottom: 3px;
+    &:after {
+      color: inherit;
+      content: $fa-caret-down;
+      display: inline-block;
+      font-family: FontAwesome;
+      font-weight: normal;
+      height: 17px;
+      width: 17px;
+    }
+  }
+
+  @include media($small-screen) {
+    max-width: 350px;
+  }
+}
+
+/* Main action button on left and Button Menu action on right */
+.vaux-button-split {
+  position: relative;
+  
+  button {
+    width: auto;
+
+    &:first-of-type {
+      margin-right: -6px;
+      position: relative;
+      width: 85%;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:last-of-type {
+      border-left: solid 1px rgba($color-black, 0.25);
+      border-bottom-left-radius: 0px;
+      border-top-left-radius: 0px;
+      width: 15%;
+      padding: 1rem 1.15rem;
+      position: relative;;
+
+      &:before {
+        content: '';
+        background-color: rgba($color-black, 0.25);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+      }
+
+      &:after {
+        position: relative;
+      }
+    }
+
+    @include media($small-screen) {
+      &:first-of-type {
+        margin-right: -6px;
+        width: auto;
+      }
+      &:last-of-type { width: auto; }
+    }
+  } 
+} 
+
+/* Button Menu dropdown content (hidden by default) */
+.vaux-button-menu {
+  display: none;
+  background-color: $button-menu-background-color;
+  border-radius: $vaux-border-radius;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
+  border: $button-menu-border;
+  position: absolute;
+  max-width: 100%;
+  min-width: 44%;
+  width: 100%;
+  z-index: 500;
+  ul {
+    margin: 0;
+    padding-left: 0;
+  }
+  li {
+    list-style: none;
+    a {
+      color: $button-menu-link-color;
+      display: block;
+      line-height: 1;
+      padding: $button-menu-link-padding;
+      text-decoration: none;
+      &:hover {
+        background-color: $button-menu-hover;
+      }
+    }
+  }
+  &.show {
+    display: block;
+  }
+
+  @include media($small-screen) {
+    width: auto;
+  }
+}
+
+.vaux-button-menu_group {
+  border-top: $button-menu-border;
+}
+
+.vaux-button-menu_group-label {
+  color: $button-menu-group-label-color;
+  display: block;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  padding: $button-menu-link-padding;
+  padding-bottom: 0.5rem;
+}

@@ -1,0 +1,22 @@
+<!-- SASS: src/stylesheets/_components/range-input.scss -->
+<!-- JS: src/js/range-input.js -->
+
+<div class="vaux-range-input-wrapper">
+  <label for="rangeInput">Range Input Label</label>
+  <span class="usa-form-hint">Move slider to select value</span>
+
+  <div class="vaux-range-input">
+    <div aria-hidden="true" class="vaux-edge-minmax-wrapper">
+        <span>min</span>
+        <span>max</span>
+    </div>    
+    
+    <div class="vaux-value-wrapper">
+      <span class="usa-sr-only">Slider on</span>
+      <span class="output-value" name="outputValue" for="rangeInput" aria-hidden="true">1</span>
+    </div>
+    
+    <input id="rangeInput" type="range" name="rangeInput" min="1" max="50" value="1" step="1" aria-valuemin="1" aria-valuemax="50" aria-valuenow="1" role="slider" tabindex="0">
+  </div>
+
+</div>

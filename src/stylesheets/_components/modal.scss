@@ -1,0 +1,158 @@
+/* ----------------------------- */
+/* 6p. Modal
+/* ----------------------------- */
+
+$modal-background-color: $color-white;
+$modal-close-color: $color-gray-medium;
+$modal-shadow-size: 0px;
+$modal-shadow-blur: 4px;
+$modal-shadow-color: rgba(0, 0, 0, 0.50);
+$modal-border: $vaux-border;
+$modal-basic-max-width: 600px;
+$modal-complex-max-width: 800px;
+$modal-max-height: 300px;
+$modal-padding: 1.2em;
+
+[data-modal-trigger] {
+  cursor: pointer;
+}
+
+.vaux-modal {
+  background: $modal-background-color;
+  border-radius: $vaux-border-radius;
+  display: none;
+  left: 50%;
+  opacity: 0;
+  padding-bottom: $modal-padding;
+  position: fixed;
+  @include shadow($modal-shadow-size, $modal-shadow-blur, $modal-shadow-color);
+  top: 1.2em;
+  transform: translate(-50%, 0);
+  width: 80%;
+
+  &.modal--open {
+    display: block;
+    z-index: 1000;
+  }
+
+  /* close Button */
+  .vaux-modal-close {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    color: $modal-close-color;
+    display: block;
+    font-weight: 400;
+    float: right;
+    -webkit-font-smoothing: auto;
+    height: auto;
+    margin: initial;
+    margin-bottom: 0.8rem;
+    outline: 0;
+    padding: 0;
+    text-align: center;
+    width: auto;
+    
+    /* icon */
+    &:after {
+      content: $fa-times;
+      display: inline-block;
+      font-family: FontAwesome;
+      height: 13px;
+      margin-left: .5rem;
+      padding: 0;
+      text-decoration: inherit;
+      width: 17px;
+    }
+  }
+
+  @include media($tablet-screen){
+    max-width: $modal-basic-max-width;
+  }
+}
+
+.vaux-modal-header {
+  padding: 2rem $modal-padding 0;
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.vaux-modal-content {
+  padding: 0em $modal-padding;
+}
+
+.vaux-modal-footer {
+  padding: $modal-padding $modal-padding 0 $modal-padding;
+
+  @include media($medium-screen) {
+    button {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+}
+
+/* Complex Modal Styles */
+.vaux-modal--complex {
+  border-radius: 0;
+  box-shadow: none;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  padding-bottom: 0;
+  position: absolute;
+  top: 0;
+  transform: none;
+  width: 100%;
+
+  .vaux-modal-header {
+    background-color: $modal-background-color;
+    border-bottom: $modal-border;
+    padding: 0.9em $modal-padding;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .vaux-modal-content {
+    bottom: 0;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+  }
+
+  .vaux-modal-footer {
+    background-color: $modal-background-color;
+    border-top: $modal-border;
+    bottom: 0;
+    padding-bottom: 1.2em;
+    position: fixed;
+    width: 100%;
+  }
+
+  @include media($tablet-screen) {
+    border-radius: $vaux-border-radius;
+    height: auto;
+    left: 50%;
+    max-width: $modal-complex-max-width;
+    min-width: 65%;
+    position: fixed;
+    top: 1.2em;
+    transform: translate(-50%, 0);
+    width: auto;
+
+    .vaux-modal-header, .vaux-modal-footer {
+      position: relative;
+    }
+
+    .vaux-modal-content {
+      max-height: $modal-max-height;
+      overflow-y: scroll;
+      position: relative;
+    }
+  }  
+}

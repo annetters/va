@@ -1,0 +1,36 @@
+<!-- SASS: src/stylesheets/_components/modal.scss -->
+<!-- JS: src/js/modal.js -->
+
+<h6>Large Modal</h6>
+<button data-modal-trigger data-attr="modalComplex" data-modal-type="complex">Open Modal</button>
+
+<h6>Large Modal w/ Button Group</h6>
+<button data-modal-trigger data-attr="modalComplexWithButtons" data-modal-type="complex">Open Modal</button>
+
+<!-- Begin Modal -->
+<div id="modalComplex" class="vaux-modal" role="dialog" aria-hidden="true" tabindex="-1" aria-labelledby="complexModalTitle">
+  <div class="vaux-modal-header">
+    <button class="vaux-modal-close">Close</button>
+    <h3 id="complexModalTitleTwo">Modal Title</h3>
+  </div>
+  <div class="vaux-modal-content">
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem dolorem doloremque quidem quibusdam cupiditate, reiciendis tenetur cumque qui. Quas, at. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat earum numquam reiciendis placeat quos, perferendis optio eos. Possimus accusantium officia quis nulla vero, distinctio, numquam deserunt, odit suscipit animi vel a esse soluta delectus! Accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dolores est fugiat quas reiciendis, veritatis sunt facere officiis temporibus ipsa non ducimus veniam, numquam eum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus tempore dolorem blanditiis vel repellendus ut non perspiciatis eum ea officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam architecto, asperiores sapiente dicta repellendus nobis, quidem officiis molestias non et!</p>
+  </div>
+</div>
+<!-- End Modal -->
+
+<!-- Begin Modal w/ Button Group -->
+<div id="modalComplexWithButtons" class="vaux-modal" role="dialog" aria-hidden="true" tabindex="-1" aria-labelledby="complexModalTitleTwo">
+  <div class="vaux-modal-header">
+    <button class="vaux-modal-close" tabindex="2">Close</button>
+    <h3 id="complexModalTitleTwo">Modal Title</h3>
+  </div>
+  <div class="vaux-modal-content">
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem dolorem doloremque quidem quibusdam cupiditate, reiciendis tenetur cumque qui. Quas, at. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat earum numquam reiciendis placeat quos, perferendis optio eos. Possimus accusantium officia quis nulla vero, distinctio, numquam deserunt, odit suscipit animi vel a esse soluta delectus! Accusantium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dolores est fugiat quas reiciendis, veritatis sunt facere officiis temporibus ipsa non ducimus veniam, numquam eum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus tempore dolorem blanditiis vel repellendus ut non perspiciatis eum ea officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam architecto, asperiores sapiente dicta repellendus nobis, quidem officiis molestias non et!</p>
+  </div>
+  <div class="vaux-modal-footer">
+    <button type="button">Agree</button>
+    <button class="usa-button-outline" type="button">Disagree</button>
+  </div>
+</div>
+<!-- End Modal -->

@@ -1,0 +1,5 @@
+status: ready
+variants:
+  - name: 'default'
+    label: 'Vertical'
+notes: "<h2>UX Guidelines</h2><p><a href='#'>Veteran's Affairs UX Guide - Process List</a></p>"

@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon.png">
+      <script src="https://use.fontawesome.com/73d8858120.js"></script>
+      <link rel="stylesheet" href="../../css/main.min.css">
+      <title>VA Pattern Library | Date Picker Component Preview</title>
+      <script src="http://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+
+    <div class="usa-grid" style="padding: 2em">
+      <div class="usa-width-one-whole">
+        <!-- SASS: src/stylesheets/_components/date-picker.scss -->
+<!-- JS: src/js/date-picker.js -->
+<!-- Vendor JS: src/js/_vendor/bootstrap-datepicker.js -->
+
+<fieldset>
+  <legend>Set a Date</legend>
+
+  <label for="startDate">Start Date</label>
+  <span class="usa-form-hint">For example: MM/DD/YYYY</span>
+  <!-- Datepicker input start -->
+  <div class="vaux-date-picker-input" data-datepicker-trigger>
+    <input id="startDate" name="startDate" type="text" aria-expanded="false">
+    <button class="usa-button" aria-label="Open Calendar"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+  </div>
+  <!-- Datepicker input end -->
+</fieldset>
+
+<fieldset>
+
+  <label for="endDate">End Date</label>
+  <span class="usa-form-hint">For example: MM/DD/YYYY</span>
+  <!-- Datepicker input start -->
+  <div class="vaux-date-picker-input" data-datepicker-trigger>
+    <input id="endDate" name="endDate" type="text" aria-expanded="false">
+    <button class="usa-button" aria-label="Open Calendar"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+  </div>
+  <!-- Datepicker input end -->
+</fieldset>
+
+<label for="dateofBirth">Date of Birth</label>
+<span class="usa-form-hint">For example: MM/DD/YYYY</span>
+<input id="dateofBirth" name="dateofBirth" type="date">
+
+      </div>
+    </div>
+
+    <script src="../../js/_vendor/vendor.min.js"></script>
+    <script src="../../js/main.min.js"></script>
+  </body>
+</html>

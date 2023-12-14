@@ -1,0 +1,54 @@
+
+
+<!-- SASS: src/stylesheets/_components/loading-indicator.scss -->
+<!-- JS: src/js/loading-indicator.js -->
+
+<!-- Default Indicator -->
+<div class="vaux-loading-indicator loading" role="progressbar">
+  <span class="usa-sr-only">Loading. Please wait.</span>
+  <div class="star1 vaux-loading-indicator-icon"></div>
+  <div class="star2 vaux-loading-indicator-icon"></div>
+  <div class="star3 vaux-loading-indicator-icon"></div>
+  <div class="star4 vaux-loading-indicator-icon"></div>
+  <div class="star5 vaux-loading-indicator-icon"></div>
+  <div class="star6 vaux-loading-indicator-icon"></div>
+  <div class="star7 vaux-loading-indicator-icon"></div>
+  <div class="star8 vaux-loading-indicator-icon"></div>
+</div>
+
+<!-- Inverted Indicator -->
+<div class="vaux-loading-indicator indicator-inverted loading" role="progressbar">
+  <span class="usa-sr-only">Loading. Please wait.</span>
+  <div class="star1 vaux-loading-indicator-icon"></div>
+  <div class="star2 vaux-loading-indicator-icon"></div>
+  <div class="star3 vaux-loading-indicator-icon"></div>
+  <div class="star4 vaux-loading-indicator-icon"></div>
+  <div class="star5 vaux-loading-indicator-icon"></div>
+  <div class="star6 vaux-loading-indicator-icon"></div>
+  <div class="star7 vaux-loading-indicator-icon"></div>
+  <div class="star8 vaux-loading-indicator-icon"></div>
+</div>
+
+<h6>Working example of page loading indicator</h6>
+
+<button type="button" data-loading-trigger>Trigger Loader</button>
+<button type="button" data-loading-trigger data-color="inverted">Trigger Inverted Loader</button>
+<p>Quae, voluptas! Illo tempora nesciunt rem assumenda quibusdam voluptatibus nobis ut perspiciatis laborum, autem rerum aperiam doloribus deleniti molestias ad inventore sapiente itaque non natus at perferendis optio. Consectetur odit a architecto unde, quae similique quas et necessitatibus deleniti aut adipisci minima nisi id itaque eligendi veniam cum odio. Quod amet ratione consequatur expedita tempore ducimus culpa fugiat tempora assumenda, ipsa qui doloribus sit impedit repellat obcaecati nulla praesentium quisquam dicta asperiores error, enim illo suscipit molestiae sapiente officia! Facilis quidem provident odio molestiae veniam perspiciatis consequatur dolores quae delectus at nobis et ipsum, quas sint culpa officia saepe! Sed.</p>
+<a href="#" id="loaderHere">Example link</a>
+<p>Eveniet voluptas, accusamus harum, et accusantium necessitatibus, nihil possimus eum consequatur reprehenderit id. Esse error repudiandae amet, delectus, nisi a voluptatibus et suscipit, quisquam dolorem vero dicta, praesentium laudantium maiores modi odit repellat dolore architecto? Ducimus, laborum hic pariatur velit. Blanditiis quibusdam repellendus, cupiditate tempore labore dolorem modi, ut dolores eius, maxime necessitatibus cumque earum inventore totam corporis saepe. A, officiis, et. Similique, aliquam, cupiditate. Temporibus porro quos, nulla dolor libero labore alias eos optio ab nihil, iste. Commodi beatae labore, explicabo, eligendi mollitia illum, nulla sequi enim maxime a velit, ipsum laboriosam accusamus dolorem esse dolore vitae aspernatur. Voluptatem!</p>
+
+<!-- Applying some styles to the examples above so they stay on the page and aren't affected by the working examples -->
+<style scoped>
+  .vaux-loading-indicator:nth-child(-n+2) {
+    margin-bottom: 2rem;
+  }
+
+  .vaux-loading-indicator.loading:nth-child(-n+2) {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    z-index: 0;
+  }
+
+</style>

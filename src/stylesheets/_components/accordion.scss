@@ -1,0 +1,27 @@
+/* ----------------------------- */
+/* 6a. Accordion
+/* ----------------------------- */
+
+.usa-accordion-button {
+  background-image: none;
+  padding: 1.5rem 3rem 1.5rem 5.5rem;
+  position: relative;
+
+  &:after {
+    content: $fa-minus;
+    font-family: FontAwesome;
+    position: absolute;
+    left: 3rem;
+  }
+
+  &:active {
+    background-color: $color-gray-light;
+  }
+}
+
+.usa-accordion-button[aria-expanded='false'] {
+  background-image: none;
+  &:after {
+    content: $fa-plus;
+  }
+}

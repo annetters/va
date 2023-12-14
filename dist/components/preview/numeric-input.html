@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon.png">
+      <script src="https://use.fontawesome.com/73d8858120.js"></script>
+      <link rel="stylesheet" href="../../css/main.min.css">
+      <title>VA Pattern Library | Numeric Input Component Preview</title>
+      <script src="http://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+
+    <div class="usa-grid" style="padding: 2em">
+      <div class="usa-width-one-whole">
+        <label for="input-type-text">Numeric input label</label>
+<input id="input-type-text" name="input-type-text" type="number">
+
+
+<!-- Validation - Error -->
+<div class="usa-input-error">
+  <label class="usa-input-error-label" for="input-error">Numeric input error</label>
+  <span class="usa-input-error-message" id="input-error-message" role="alert">Helpful error message</span>
+  <input id="input-error" name="input-error" type="number" aria-describedby="input-error-message">
+</div>
+
+<!-- Validation - Success -->
+<label for="input-success">Numeric input success</label>
+<input class="usa-input-success" id="input-success" name="input-success" type="number">
+      </div>
+    </div>
+
+    <script src="../../js/_vendor/vendor.min.js"></script>
+    <script src="../../js/main.min.js"></script>
+  </body>
+</html>

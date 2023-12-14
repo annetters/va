@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon.png">
+      <script src="https://use.fontawesome.com/73d8858120.js"></script>
+      <link rel="stylesheet" href="../../css/main.min.css">
+      <title>VA Pattern Library | Loading Indicator Component Preview</title>
+      <script src="http://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+
+    <div class="usa-grid" style="padding: 2em">
+      <div class="usa-width-one-whole">
+        <!-- SASS: src/stylesheets/_components/loading-indicator.scss -->
+<!-- JS: src/js/loading-indicator.js -->
+
+<!-- Default Indicator -->
+<div class="vaux-loading-indicator--inline loading example" role="progressbar">
+  <span class="usa-sr-only">Processing.</span>
+  <div class="star1 vaux-loading-indicator-icon"></div>
+  <div class="star2 vaux-loading-indicator-icon"></div>
+  <div class="star3 vaux-loading-indicator-icon"></div>
+  <div class="star4 vaux-loading-indicator-icon"></div>
+  <div class="star5 vaux-loading-indicator-icon"></div>
+  <div class="star6 vaux-loading-indicator-icon"></div>
+  <div class="star7 vaux-loading-indicator-icon"></div>
+  <div class="star8 vaux-loading-indicator-icon"></div>
+</div>
+
+<!-- Inverted Indicator -->
+<div class="vaux-loading-indicator--inline indicator-inverted loading example" role="progressbar">
+  <span class="usa-sr-only">Processing.</span>
+  <div class="star1 vaux-loading-indicator-icon"></div>
+  <div class="star2 vaux-loading-indicator-icon"></div>
+  <div class="star3 vaux-loading-indicator-icon"></div>
+  <div class="star4 vaux-loading-indicator-icon"></div>
+  <div class="star5 vaux-loading-indicator-icon"></div>
+  <div class="star6 vaux-loading-indicator-icon"></div>
+  <div class="star7 vaux-loading-indicator-icon"></div>
+  <div class="star8 vaux-loading-indicator-icon"></div>
+</div>
+
+<h6>Working example of an inline loading indicator</h6>
+
+<div>
+  <button type="button">Focusable Element</button>
+</div>
+
+<div>  
+  <button data-loading-trigger data-loader="inline" data-color="inverted" type="button">Reload</button>
+</div>
+
+<!-- Applying some styles to the indicator above so they stay on the page and aren't affected by the working example. Example class applied to them so they can be selected. -->
+<style scoped>
+  .vaux-loading-indicator--inline.example {
+    margin-bottom: 2rem;
+  }
+
+  .vaux-loading-indicator--inline.loading.example {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    z-index: 0;
+  }
+
+</style>
+      </div>
+    </div>
+
+    <script src="../../js/_vendor/vendor.min.js"></script>
+    <script src="../../js/main.min.js"></script>
+  </body>
+</html>

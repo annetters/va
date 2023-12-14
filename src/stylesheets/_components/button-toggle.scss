@@ -1,0 +1,104 @@
+/* ----------------------------- */
+/* 6e. Button Toggle
+/* ----------------------------- */
+
+$toggle-background-color: $color-white;
+$toggle-text-color: $color-primary;
+$toggle-active-bg-color: $color-primary;
+$toggle-active-text-color: $color-white;
+$toggle-vertical-padding: 8px;
+$toggle-horizontal-padding: 20px;
+
+
+fieldset.vaux-toggle-button-row {
+  legend {
+    font-weight: 700;
+    padding: $toggle-vertical-padding $toggle-vertical-padding $toggle-vertical-padding 0px;
+  }
+
+  @include media($small-screen) {
+    legend {
+      float: left;
+    }
+  }
+}
+
+.vaux-toggle-button {
+  input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+
+    /* Active state */
+    &:checked + label {
+      background-color: $toggle-active-bg-color;
+      color: $toggle-active-text-color;
+    }
+  }
+
+  label {
+    background-color: $toggle-background-color;
+    color: $toggle-text-color;
+    font-weight: 700;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    padding: $toggle-vertical-padding $toggle-horizontal-padding;
+    line-height: 1;
+    border: 2px solid $toggle-text-color;
+    border-radius: 3px;
+    transition: all 0.1s ease-in-out;
+    &:before {
+      display: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @include media($small-screen) {
+    label {
+      float: left;
+      display: inline-block;
+    }
+  }
+
+  &:first-of-type {
+    label {
+      border-radius: 3px;
+    }
+  }
+  &:last-of-type {
+    label {
+      border-radius: 3px;
+    }
+  }
+
+  @include media($small-screen) {
+    label {
+      border-radius: 0;
+    }
+
+    &:first-of-type {
+      label {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right-width: 0;
+      }
+    }
+    &:last-of-type {
+      label {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-left-width: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="16x16" href="{{ path '/img/favicon.ico' }}">
+      <script src="https://use.fontawesome.com/73d8858120.js"></script>
+      <link rel="stylesheet" href="{{ path '/css/main.min.css' }}">
+      <title>VA Pattern Library | {{ _target.component.label }} Component Preview</title>
+  </head>
+  <body>
+
+    <div class="usa-grid" style="padding: 2em">
+      <div class="usa-width-one-whole">
+        {{{ yield }}}
+      </div>
+    </div>
+
+    <script src="{{ path '/js/_vendor/vendor.min.js' }}"></script>
+    <script src="{{ path '/js/main.min.js' }}"></script>
+  </body>
+</html>

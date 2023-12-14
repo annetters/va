@@ -1,0 +1,69 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon.png">
+      <script src="https://use.fontawesome.com/73d8858120.js"></script>
+      <link rel="stylesheet" href="../../css/main.min.css">
+      <title>VA Pattern Library | Checkbox Component Preview</title>
+      <script src="http://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+
+    <div class="usa-grid" style="padding: 2em">
+      <div class="usa-width-one-whole">
+        <fieldset class="usa-fieldset-inputs usa-sans">
+  <legend>Historical figures 1</legend>
+  <ul class="usa-unstyled-list">
+    <li>
+      <input id="truth" type="checkbox" name="historical-figures-1" value="truth" checked>
+      <label for="truth">Sojourner Truth</label>
+    </li>
+    <li>
+      <input id="douglass" type="checkbox" name="historical-figures-1" value="douglass">
+      <label for="douglass">Frederick Douglass</label>
+    </li>
+    <li>
+      <input id="washington" type="checkbox" name="historical-figures-1" value="washington">
+      <label for="washington">Booker T. Washington</label>
+    </li>
+    <li>
+      <input id="carver" type="checkbox" name="historical-figures-1" value="carver" disabled>
+      <label for="carver">George Washington Carver</label>
+    </li>
+  </ul>
+</fieldset>
+
+<!-- Validation - Error -->
+<fieldset class="usa-fieldset-inputs usa-input-error">
+  <legend>Historical figures 2</legend>
+  <span class="usa-input-error-message" id="input-error-message" role="alert">Helpful error message</span>
+  <ul class="usa-unstyled-list">
+    <li>
+      <input id="truth" type="checkbox" name="historical-figures-1-error" value="truth" checked>
+      <label for="truth">Sojourner Truth</label>
+    </li>
+    <li>
+      <input id="douglass" type="checkbox" name="historical-figures-1-error" value="douglass">
+      <label for="douglass" class="usa-input-error-label">Frederick Douglass</label>
+    </li>
+    <li>
+      <input id="washington" type="checkbox" name="historical-figures-1-error" value="washington">
+      <label for="washington">Booker T. Washington</label>
+    </li>
+    <li>
+      <input id="carver" type="checkbox" name="historical-figures-1-error" value="carver" disabled>
+      <label for="carver">George Washington Carver</label>
+    </li>
+  </ul>
+</fieldset>
+      </div>
+    </div>
+
+    <script src="../../js/_vendor/vendor.min.js"></script>
+    <script src="../../js/main.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+/* ----------------------------- */
+/* 6u. Progress Bar
+/* ----------------------------- */
+
+$progress-bar-bg: $color-gray-cool-light;
+$progress-bar-fill: $color-primary;
+
+progress[value] {
+  /* reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  height: 1.2rem;
+  margin-bottom: 0.4rem;
+  margin-top: 1rem;
+  width: 100%;
+
+  &::-webkit-progress-bar {
+    background: $progress-bar-bg;
+    border-radius: 6px;
+  }
+
+  &::-webkit-progress-value {
+    background-color: $progress-bar-fill;
+    border-radius: 6px 0 0 6px;
+  }
+
+  &::-moz-progress-bar { 
+    background: $progress-bar-fill;
+    border-radius: 6px;
+  }
+}

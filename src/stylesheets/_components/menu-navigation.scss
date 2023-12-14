@@ -1,0 +1,44 @@
+/* ----------------------------- */
+/* 6o. Menu-Navigation
+/* ----------------------------- */
+
+$header-bg-color: $color-primary-darkest;
+$header-height: 5.4rem;
+$logo-text-color: $color-white;
+
+
+.usa-header {
+  border-bottom: none;
+
+  .usa-navbar {
+    background-color: $header-bg-color;
+    height: $header-height;
+    width: 100%;
+
+    .usa-menu-btn {
+      height: 5.4rem;
+      line-height: 5.4rem;
+    }
+  }
+
+  .usa-logo {
+    line-height: $header-height;
+    a {
+      color: $logo-text-color;
+      display: block;
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: $header-height;
+      img {
+        height: 23px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .usa-search {
+    float: none;
+    max-width: none;
+    margin-bottom: initial;
+  }
+}

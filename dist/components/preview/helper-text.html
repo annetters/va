@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon.png">
+      <script src="https://use.fontawesome.com/73d8858120.js"></script>
+      <link rel="stylesheet" href="../../css/main.min.css">
+      <title>VA Pattern Library | Helper Text Component Preview</title>
+      <script src="http://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+
+    <div class="usa-grid" style="padding: 2em">
+      <div class="usa-width-one-whole">
+        <!-- Required Text -->
+<label for="input-type-text" class="usa-input-required">Required text input</label>
+<input id="input-type-text" name="input-type-text" type="text" required="" aria-required="true">
+
+<!-- Hint text -->
+<label id="form-hint-label" for="input-type-hint">Text input label</label>
+<span id="form-hint-text" class="usa-form-hint">This is example hint text</span>
+<input id="input-type-hint" name="input-type-text" type="text" aria-labeledby="form-hint-label form-hint-text">
+
+<!-- Helper Text (wrapped in form for example because form note floats right-->
+<form class="usa-form">
+  <label id="form-helper-label" for="input-type-helper">Text input label</label>
+  <input id="input-type-helper" name="input-type-text" type="text" aria-labeledby="form-helper-label form-helper-text">
+  <p id="form-helper-text" class="usa-form-note" aria-controls="input-type-text" title="Helper text">This is an example of form note helper text</p>
+</form>
+      </div>
+    </div>
+
+    <script src="../../js/_vendor/vendor.min.js"></script>
+    <script src="../../js/main.min.js"></script>
+  </body>
+</html>

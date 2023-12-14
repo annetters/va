@@ -1,0 +1,126 @@
+/* ----------------------------- */
+/* 6t. Process List
+/* ----------------------------- */
+
+$process-list-max-width: 300px;
+$process-list-dot-background-color: $color-primary;
+$process-list-dot-text-color: $color-white;
+$process-list-dot-next-step-background-color: $color-gray-lighter;
+$process-list-dot-ring-color: $color-white;
+$process-list-dot-connector-color: $color-gray-lighter;
+$process-list-dot-padding: 1rem;
+$process-list-dot-size: 24px;
+
+/* process list - vertical (default) */
+.vaux-process-list ol {
+  counter-reset: stepCount;
+  list-style: none;
+  margin: 0;
+  max-width: $process-list-max-width;
+  padding: 0 0 0 12px;
+
+  li {
+    border-left: 2px $process-list-dot-connector-color solid;
+    padding-bottom: $process-list-dot-padding;
+    position: relative;
+    min-height: 60px;
+
+    &:before {
+      color: $process-list-dot-text-color;
+      background: $process-list-dot-background-color;
+      border-radius: 50%;
+      box-shadow: 0 0 0 10px $process-list-dot-ring-color;
+      content: counter(stepCount);
+      counter-increment: stepCount;
+      font-size: 13px;
+      height: $process-list-dot-size;
+      left: -13px;
+      line-height: 26px;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: $process-list-dot-size;
+    }
+
+    &.completed-step:before {
+      content: "\f00c";
+      font-family: FontAwesome;
+    }
+
+    &:last-child {
+      border: 0;
+    }
+
+    span {
+      display: block;
+      margin-left: 32px;
+    }
+
+    button {
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+  }
+
+  li.current-step ~ li::before {
+    background-color: $process-list-dot-next-step-background-color;
+  }
+}
+
+/* process list - horizontal */
+.vaux-process-list.horizontal ol {
+  display: flex;
+  max-width: 100%;
+  padding: 12px 50px 0;
+
+  li {
+    border-left: 0;
+    border-top: 2px $process-list-dot-connector-color solid;
+    display: flex;
+    flex-basis: 150px;
+    flex-grow: 1;
+    min-height: 0;
+    min-width: 60px;
+    padding-bottom: 12px;
+    vertical-align: top;
+
+    &:before {
+      left: 0;
+      top: -12px;
+    }
+
+    &:last-child {
+      border: 0;
+      flex-basis: 27px;
+      flex-grow: 0;
+      min-width: 0;
+      width: auto;
+    }
+
+    span {
+      left: -50px;
+      margin: 0;
+      max-width: 140px;
+      min-width: 120px;
+      position: relative;
+      text-align: center;
+      top: 20px;
+      white-space: nowrap;
+      z-index: 99;
+    }
+  }
+}
+
+/* process list - bottom label */
+.vaux-process-list.has-bottom-label-activated {
+  ol li span {
+    display: none;
+  }
+
+  .process-bottom-label {
+    font-weight: bold;
+    min-width: 286px;
+    padding: 0 0 0 4%;
+    text-align: center;
+  }
+}

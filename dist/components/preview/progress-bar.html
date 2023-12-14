@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon.png">
+      <script src="https://use.fontawesome.com/73d8858120.js"></script>
+      <link rel="stylesheet" href="../../css/main.min.css">
+      <title>VA Pattern Library | Progress Bar Component Preview</title>
+      <script src="http://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+
+    <!-- SASS: src/stylesheets/_components/file-upload.scss -->
+
+<br>
+<div class="usa-grid">
+    <div class="usa-width-one-half">
+        <h6>Mobile - file upload</h6>
+
+        <ul class="vaux-file-list no-borders">
+            <li class="vaux-file-item">
+                <div>
+                    <div class="file-info">
+                        <span><b>uploadedfile.pdf</b></span>
+                        <span>(1.4mb)</span>
+                    </div>
+                </div>
+                <progress class="hidden" max="100" value="70"></progress>
+            </li>
+        </ul>
+
+        <br>
+
+        <h6>Tablet & Desktop - percent</h6>
+
+        <ul class="vaux-file-list no-borders">
+            <li class="vaux-file-item">
+                <div>
+                    <div class="file-info">
+                        <span><b>Profile</b></span>
+                        <span>(80%)</span>
+                    </div>
+                </div>
+                <progress class="hidden" max="100" value="50"></progress>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <script src="../../js/_vendor/vendor.min.js"></script>
+    <script src="../../js/main.min.js"></script>
+  </body>
+</html>

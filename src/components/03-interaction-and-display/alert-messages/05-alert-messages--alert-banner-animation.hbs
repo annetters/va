@@ -1,0 +1,30 @@
+<!-- SASS: src/stylesheets/_components/alert-messages.scss -->
+<!-- JS: src/js/alert-messages.js -->
+
+<div class="vaux-alert-center">
+  <div class="usa-alert usa-alert-success vaux-alert-site" role="status" aria-live="polite" data-trigger-site-alert>
+    <div class="usa-alert-body">
+      <p class="usa-alert-text">Schervish, Gabriel was Added to Your Consulting List</p>
+      <button aria-label="Close alert"><i class="fa fa-times" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <div class="usa-alert usa-alert-error vaux-alert-site" role="alert" data-trigger-site-alert>
+    <div class="usa-alert-body">
+      <p class="usa-alert-text">An error occurred. Please try again later.</p>
+      <button aria-label="Close alert"><i class="fa fa-times" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- Mock JS for example only -->
+<script>
+  document.getElementsByClassName('vaux-alert-site')[0].style.display = 'none';
+
+  setTimeout(pushAlert, 3000);
+
+  function pushAlert() {
+    var secondaryAlert = document.getElementsByClassName('vaux-alert-site')[0];
+    secondaryAlert.style.display = null;
+  }
+</script>

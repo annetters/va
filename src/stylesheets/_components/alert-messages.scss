@@ -1,0 +1,106 @@
+/* ----------------------------- */
+/* 6b. Alert Messages
+/* ----------------------------- */
+
+.usa-alert,
+.usa-alert-success,
+.usa-alert-info,
+.usa-alert-error,
+.usa-alert-warning {
+  background-image: none;
+  position: relative;
+
+  &:after {
+    font-family: FontAwesome;
+    font-size: 3.6rem;
+    margin: 0;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .usa-alert-body {
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+    padding-left: 5rem;
+
+    .usa-alert-heading {
+      min-height: 34px;
+    }
+  }
+
+  .usa-checklist {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin: 0;
+    padding: 0 0 1rem;
+  }
+
+  .usa-checklist li {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 0;
+    padding: 0;
+    text-indent: 0;
+  }
+  .usa-checklist li:before {
+    display: none;
+  }
+}
+
+.usa-alert-success:after {
+  color: $color-green;
+  content: $fa-check-circle;
+}
+
+.usa-alert-info:after {
+  color: $color-cool-blue;
+  content: $fa-info-circle;
+}
+
+.usa-alert-error:after {
+  color: $color-secondary-darkest;
+  content: $fa-exclamation-circle;
+}
+
+.usa-alert-warning:after {
+  color: $color-base;
+  content: $fa-exclamation-triangle;
+}
+
+/* Site Alerts */
+.vaux-alert-center {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.usa-alert.vaux-alert-site {
+  animation: slideInDown 1s both;
+  margin-top: 0;
+  z-index: 0;
+
+  button {
+    background: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 2rem;
+    top: 2.25rem;
+    width: auto;
+  }
+
+  &.slide-closed {
+    animation: slideOutUp 0.25s both linear;
+    z-index: -1;
+  }
+}

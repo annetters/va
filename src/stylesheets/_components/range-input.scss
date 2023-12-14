@@ -1,0 +1,151 @@
+/* ----------------------------- */
+/* 6v. Range Input
+/* ----------------------------- */
+
+$track-color: $color-gray-lighter;
+$track-width: 100%;
+$track-height: 8px;
+$track-shadow-size: 1px;
+$track-shadow-blur: 3px;
+$track-shadow-color: rgba(0, 0, 0, 0.3);
+$track-border-width: 1px;
+$track-border-color: $color-gray-lighter;
+$track-radius: 2px;
+$thumb-color: $color-primary;
+$thumb-radius: 100%;
+$thumb-height: 24px;
+$thumb-width: 24px;
+$thumb-shadow-size: 1px;
+$thumb-shadow-blur: 4px;
+$thumb-shadow-color: rgba(0, 0, 0, 0.3);
+$focus-contrast: 5%;
+$min-max-font-size: 1.4rem;
+
+@mixin track {
+  cursor: pointer;
+  height: $track-height;
+  transition: all .2s ease;
+  width: $track-width;
+}
+
+@mixin thumb {
+  @include shadow($thumb-shadow-size, $thumb-shadow-blur, $thumb-shadow-color);
+  background: $thumb-color;
+  border: none;
+  border-radius: $thumb-radius;
+  cursor: pointer;
+  height: $thumb-height;
+  width: $thumb-width;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  margin: ($thumb-height / 2) 0;
+  width: $track-width;
+  padding: 2rem 0em;
+
+  &:focus, &:active {
+    outline: 0;
+
+    &::-webkit-slider-runnable-track {
+      background: lighten($track-color, $focus-contrast);
+      box-shadow: $focus-shadow;
+    }
+
+    &::-ms-fill-lower {
+      background: $track-color;
+      box-shadow: $focus-shadow;
+    }
+
+    &::-ms-fill-upper {
+      background: lighten($track-color, $focus-contrast);
+      box-shadow: $focus-shadow;
+    }
+
+    &::-ms-thumb {
+      border: none;
+    }
+
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include track;
+    background: $track-color;
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius;
+  }
+
+  &::-webkit-slider-thumb {
+    @include thumb;
+    -webkit-appearance: none;
+    margin-top: ((-$track-border-width * 2 + $track-height) / 2) - ($thumb-height / 2);
+  }
+
+  &::-moz-range-track {
+    @include track;
+    background: $track-color;
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius;
+  }
+
+  &::-moz-range-thumb {
+    @include thumb;
+  }
+
+  &::-ms-track {
+    @include track;
+    background: transparent;
+    border-color: transparent;
+    border-width: ($thumb-height / 2) 0;
+    color: transparent;
+  }
+
+  &::-ms-fill-lower {
+    background: darken($track-color, $focus-contrast);
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius * 2;
+  }
+
+  &::-ms-fill-upper {
+    background: $track-color;
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius * 2;
+  }
+
+  &::-ms-thumb {
+    @include thumb;
+    margin-top: 0;
+  }
+}
+
+.vaux-range-input {
+  position: relative;
+  max-width: 46rem;
+}
+
+/* Min/Max */
+.vaux-edge-minmax-wrapper {
+  font-size: $min-max-font-size;
+  position: relative;
+  top: -8px;
+  width: 100%;
+  span {
+    position: absolute;
+    &:first-of-type {
+      left: 0;
+    }
+    &:last-of-type {
+      right: 0;
+    }
+  }
+}
+
+/* Current Value Wrapper */
+.vaux-value-wrapper {
+  position: relative;
+  font-size: $min-max-font-size;
+  top: -8px;
+  .output-value {
+    position: absolute;
+  } 
+}

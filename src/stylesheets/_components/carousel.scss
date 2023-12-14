@@ -1,0 +1,92 @@
+/* ----------------------------- */
+/* 6g. Carousel
+/* Note: This component is using the Slick Carousel vendor files for initial styles and theming.
+/* Rules written here are to overwrite those with our own theme.
+/* ----------------------------- */
+
+$vaux-carousel-button-dot-color: $color-primary;
+$vaux-carousel-prev-icon: $fa-chevron-left;
+$vaux-carousel-next-icon: $fa-chevron-right;
+$vaux-carousel-dot-icon: $fa-circle-o;
+$vaux-carousel-dot-icon-active: $fa-circle;
+
+/* Slider Body */
+.vaux-carousel {
+  padding: 0rem 2rem;
+}
+
+/* Navigation Arrows/Buttons */
+.vaux-carousel-prev,
+.vaux-carousel-next {
+  border: none;
+  display: block;
+  font-size: 0px;
+  height: 45px;
+  line-height: 0px;
+  width: 38px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  &.slick-disabled {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:before {
+    font-family: FontAwesome;
+    font-size: 15px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.vaux-carousel-prev {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  left: -35px;
+  &:before {
+    content: $vaux-carousel-prev-icon;
+    margin-left: -3px;
+  }
+}
+
+.vaux-carousel-next {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  right: -35px;
+  &:before {
+    content: $vaux-carousel-next-icon;
+    margin-right: -3px;
+  }
+}
+
+/* Navigation Dots */
+.vaux-carousel-dots {
+  position: relative;
+  
+  li {
+    button {
+      &:before {
+        content: $vaux-carousel-dot-icon;
+        color: $vaux-carousel-button-dot-color;
+        font-family: FontAwesome;
+        font-size: 1.7rem;
+        font-weight: 100;
+        opacity: 1;
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    
+    /* active slide dot */
+    &.slick-active button:before {
+      content: $vaux-carousel-dot-icon-active;
+      color: $vaux-carousel-button-dot-color;
+      opacity: 1;
+    }
+  }  
+}

@@ -1,0 +1,6 @@
+status: queue
+preview: '@preview-content'
+notes: "<h2>UX Guidelines</h2><p><a href='#'>Veteran's Affairs UX Guide - Component Template</a></p>"
+variants:
+  - name: 'default'
+    label: 'Component Template'

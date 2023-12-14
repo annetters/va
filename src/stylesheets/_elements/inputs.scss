@@ -1,0 +1,43 @@
+/* ----------------------------- */
+/* 4b. Inputs
+/* ----------------------------- */
+
+input {
+  background: $color-white;
+}
+
+input[type="range"] {
+  height: auto;
+}
+
+[type=checkbox] + label,
+[type=radio] + label {
+  margin-bottom: 1em;
+}
+
+fieldset.usa-fieldset-inputs {
+  legend {
+    display: block;
+    font-size: 1.7rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    max-width: 46rem;
+  }
+}
+
+fieldset.usa-fieldset-inputs.usa-input-error {
+  legend { 
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: -1rem;
+    & + .usa-input-error-message {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.usa-date-of-birth {
+  .usa-form-group label {
+    color: #757575;
+  }
+}

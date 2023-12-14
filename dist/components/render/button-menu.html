@@ -1,0 +1,85 @@
+
+
+<!-- SASS: src/stylesheets/_components/button-menu.scss -->
+<!-- JS: src/js/button-menu.js -->
+
+<h6>Button Menu</h6>
+<div class="vaux-button-menu-wrapper">
+  <button aria-expanded="false" aria-controls="bm1" data-trigger-buttonmenu>Button Menu</button>
+  <div id="bm1" class="vaux-button-menu" tabindex="-1" aria-hidden="true">
+    <ul aria-role="menu">
+      <li><a href="#">Option 1</a></li>
+      <li><a href="#">Option 2</a></li>
+      <li><a href="#">Option 3</a></li>
+      <div class="vaux-button-menu_group">
+        <li><a href="#">Other</a></li>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<h6>Button Menu with longer option text</h6>
+<div class="vaux-button-menu-wrapper">
+  <button aria-expanded="false" aria-controls="bm2" data-trigger-buttonmenu>Button Menu</button>
+  <div id="bm2" class="vaux-button-menu" tabindex="-1" aria-hidden="true">
+    <ul>
+      <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad.</a></li>
+      <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+      <li><a href="#">Lorem ipsum.</a></li>
+      <div class="vaux-button-menu_group">
+        <li><a href="#">Lorem</a></li>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<h6>Button Menu with group names</h6>
+<div class="vaux-button-menu-wrapper">
+  <button aria-expanded="false" aria-controls="bm3" data-trigger-buttonmenu>Button Menu</button>
+  <div id="bm3" class="vaux-button-menu" tabindex="-1" aria-hidden="true">
+    <ul>
+      <span id="groupOne" class="vaux-button-menu_group-label">Group 1</span>
+      <li><a aria-labelledby="groupOne" href="#">Option 1</a></li>
+      <li><a aria-labelledby="groupOne" href="#">Option 2</a></li>
+      <li><a aria-labelledby="groupOne" href="#">Option 3</a></li>
+      <div class="vaux-button-menu_group">
+        <span id="groupTwo" class="vaux-button-menu_group-label">Group 2</span>
+        <li><a aria-labelledby="groupTwo" href="#">Other</a></li>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<h6>Button Menu - Split</h6>
+<div class="vaux-button-menu-wrapper">
+  <div class="vaux-button-split">
+    <button>Main Menu</button>
+    <button aria-expanded="false" aria-controls="bm4" data-trigger-buttonmenu><span class="usa-sr-only">Button Menu</span></button>
+  </div>
+  <div id="bm4" class="vaux-button-menu" tabindex="-1" aria-hidden="true">
+    <ul>
+      <li><a href="#">Option 1</a></li>
+      <li><a href="#">Option 2</a></li>
+      <li><a href="#">Option 3</a></li>
+      <div class="vaux-button-menu_group">
+        <li><a href="#">Other</a></li>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<h6>Button Menu - Right Aligned</h6>
+<div class="vaux-button-menu-wrapper align-menu-right">
+  <button aria-expanded="false" aria-controls="bm5" data-trigger-buttonmenu>Button Menu</button>
+  <div id="bm5" class="vaux-button-menu" tabindex="-1" aria-hidden="true">
+    <ul>
+      <li><a href="#">Option 1</a></li>
+      <li><a href="#">Option 2</a></li>
+      <li><a href="#">Option 3</a></li>
+      <div class="vaux-button-menu_group">
+        <li><a href="#">Other</a></li>
+      </div>
+    </ul>
+  </div>
+</div>
+

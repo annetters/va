@@ -1,0 +1,22 @@
+<!-- SASS: src/stylesheets/_components/menu-navigation.scss -->
+<!-- @navigation: src/components/_navigation/navigation.hbs -->
+
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<header class="usa-header" role="banner">
+  
+    <div class="usa-navbar">
+      <div class="usa-nav-container">
+      {{> @navigation }}  
+
+      <div class="usa-logo" id="logo">
+        <em class="usa-logo-text">
+          <a href="#" accesskey="1" title="Home" aria-label="App Home"><img src="{{ path '/img/logo-VA.png' }}" alt="Veteran's Affairs"> | App Title</a>
+        </em>
+      </div>
+    </div>
+   
+  
+  </div>
+</header>
+
+<main id="main-content"></main>

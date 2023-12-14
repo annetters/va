@@ -1,0 +1,88 @@
+/* ----------------------------- */
+/* 4a. Typography
+/* ----------------------------- */
+
+/* Overwriting some $font-serif declarations to $font-sans */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-sans;
+}
+
+/* Overwriting heading sizes to match what is on the USWDS site */
+h1 {font-size: $h1-font-size;}
+h2 {font-size: $h2-font-size;}
+h3 {font-size: $h3-font-size;}
+h4 {font-size: $h4-font-size;}
+h5 {font-size: $h5-font-size;}
+h6 {font-size: $h6-font-size;}
+
+/* Including classes that point to the visual styles of headings so pages can follow semantic markup while allowing for visual flexability */
+
+.vaux-heading-h1 { @extend h1; }
+.vaux-heading-h2 { @extend h2; }
+.vaux-heading-h3 { @extend h3; }
+.vaux-heading-h4 { @extend h4; }
+.vaux-heading-h5 { @extend h5; }
+.vaux-heading-h6 { @extend h6; }
+
+.usa-font-lead {
+  font-family: $font-sans;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* Overwriting USWDS link hover styles */
+a {
+  transition-property: color, background-color, border-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s; 
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Transferring this style from USWDS for heading alt style */
+.usa-display {
+  font-size: 5.9rem;
+  font-weight: 700;
+}
+
+.usa-display-alt {
+  font-size: 4.4rem;
+  font-weight: 300;
+}
+
+.usa-heading-alt {
+  border-bottom: 1px solid $color-gray;
+  padding-bottom: .8rem;
+}
+
+/* Buttons/Text that should appear like links */
+.vaux-link {
+  @extend a;
+  background-color: transparent;
+  font-weight: 500;
+  -webkit-font-smoothing: auto;
+  line-height: 2.2rem;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  &:hover, &:active {
+    background-color: transparent;
+    text-decoration: underline;
+  }
+}
+
+// Changing out USWDS SVG for FontAwesome icon
+.usa-external_link:after {
+  background: none;
+  content: $fa-external-link;
+  color: inherit;
+  font-family: FontAwesome;
+  font-size: 1.15rem;
+  margin-right: 0.4rem;
+}

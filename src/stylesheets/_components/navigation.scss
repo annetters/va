@@ -1,0 +1,313 @@
+/* ----------------------------- */
+/* 6q. Navigation
+/* ----------------------------- */
+
+$nav-menu-background-color: $color-white;
+$nav-header-background-color: $color-gray-lightest;
+$nav-border-color: $color-gray-warm-light;
+$nav-text-color: $color-black;
+$nav-font-weight: $font-normal;
+
+/* Nav Wrapper */
+.vaux-main-nav {
+
+  /* menu button */
+  .usa-menu-btn {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 900;
+    height: 3.9rem;
+    padding: 0 1.5rem;
+    text-transform: none;
+    width: 8.7rem;
+    .fa {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+/* Menu Wrapper */
+.vaux-nav-menu-wrapper {
+  background: $nav-menu-background-color;
+  border-left: 1px solid $nav-border-color;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.3s;
+  width: 100%;
+  z-index: 1000;
+
+  @include media($medium-screen) {
+    width: 300px;
+  }
+  
+  /* When menu is open */
+  &.menu--open {
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* top navbar */
+  .usa-navbar {
+    background-color: $nav-header-background-color;
+    border-bottom: 1px solid $nav-border-color;
+    height: 5rem;
+    padding: 0rem 2rem;
+
+    @media screen and (min-width: 951px) {
+      display: block;
+    }
+  }
+
+  /* close Button */
+  .usa-nav-close {
+    color: $nav-text-color;
+    height: auto;
+    margin: 0;
+    padding: 1.65rem 0;
+    width: auto;
+    
+    /* icon */
+    &:after {
+      content: $fa-times;
+      display: inline-block;
+      height: 12px;
+      font-family: FontAwesome;
+      margin-left: .5rem;
+      width: 17px;
+    }
+
+    @media screen and (min-width: 951px) {
+      display: block;
+    }
+  }
+
+  /* back button */
+  .vaux-menu-back {
+    background: none;
+    color: $nav-text-color;
+    font-weight: $nav-font-weight;
+    margin: 0;
+    padding: 1.65rem 0;
+    position: absolute;
+    transition: opacity 0.1s;
+    width: auto;
+    z-index: 100;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 12px;
+      background: url('#{$vaux-img-path}angle-left.png') no-repeat left -5px center;
+      background: url('#{$vaux-img-path}angle-left.svg') no-repeat left -5px center, linear-gradient(transparent, transparent);
+      background-size: 17px;
+      width: 15px;
+    }
+
+    &:hover, &:focus, &:active {
+      text-decoration: underline;
+    }
+    
+    /* hidden when on the main menu */
+    &.vaux-menu-back--hidden {
+      display: none;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+/* List Wrapper */
+.vaux-nav-menus {
+  bottom: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 3.5em;
+  width: 100%;
+
+  /* search bar */
+  .usa-search [type=search], .usa-search .usa-search-input {
+    width: calc(100% - 9.5rem);
+  }
+
+  /* lists/menus */
+  .usa-sidenav-list {
+    height: 100%;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: -0.5rem;
+    overflow-y: scroll;
+    padding: 0.3rem 2rem 0;
+    position: absolute;
+    top: 0;
+    visibility: hidden; 
+    width: calc(100% + 50px);
+
+    &[class^='animate-'],
+    &[class*=' animate-'] {
+      visibility: visible;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    a {
+      padding: 1.25rem 1rem 1.25rem 1.8rem;
+
+      @include media($medium-screen) {
+        padding: 1rem 1rem 1rem 1.8rem;
+      }
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    & > li:first-of-type {
+      border-top: none;
+    }
+
+    &.switch-apps-submenu {
+      height: 100%;
+    }
+    
+    /* Adding psuedo-element to fix scroll on Firefox/IE */
+    &:after {
+      content: "";
+      display: block;
+      height: 125px;
+    }
+  }
+  
+  /* current/active list */
+  .usa-sidenav-list--current {
+    visibility: visible;
+  }
+
+}
+
+/* List items */
+.vaux-menu-item {
+  display: block;
+  width: calc(100% - 50px);
+}
+
+/* Links within list items */
+.vaux-menu-link {
+  display: block;
+  position: relative;
+  transition: color 0.1s;
+
+  &[data-submenu]:after {
+    content: $fa-angle-right;
+    display: block;
+    font-family: FontAwesome;
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: normal;
+    height: 17px;
+    padding-right: .5rem;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 30%;
+    width: 17px;
+  }
+}
+
+/* Application Menu */
+.usa-sidenav-list.application-menu {
+  background-color: $color-gray-lightest;
+  border-top: 1px solid $color-gray-warm-light;
+  bottom: 5px;
+  height: auto;
+  padding: 1.8rem 2rem;
+  top: auto;
+  visibility: visible;
+  > li {
+    border-color: $color-gray-light;
+  }
+  .vaux-menu-link {
+    padding-left: 0;
+    &:hover i {
+      color: $color-primary;
+    }
+    i {
+      color: $color-primary-darker;
+      margin-right: 1.3rem;
+      width: 17px;
+    }
+  }
+  
+  /* removing psuedo element for these menus */
+  &:after {
+    content: none;
+  }
+}
+
+.usa-sidenav-list.switch-apps-submenu {
+  background-color: white;
+  padding: 0.3rem 2rem 0rem;
+  z-index: 1;
+  li {
+    a {
+      padding: 1.5rem 0.8rem;
+    }
+    img {
+      display: inline-block;
+      position: absolute;
+      height: 40px;
+      width: 40px;
+    }
+    div {
+      display: inline-block;
+      padding-left: 6rem;
+      h5 {
+        margin-bottom: 0.6rem;
+        margin-top: 0;
+      }
+      p {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+    }
+  }
+
+  /* removing psuedo element for these menus */  
+  &:after {
+    content: none;
+  }
+}
+
+/* Menu Item Animations */
+.animate-outToRight {
+  animation: outToRight 0.25s both ease-in-out;
+  .vaux-menu-item, h3, .usa-search {
+    animation: outToRight 0.25s both ease-in-out;
+  }
+}
+
+.animate-outToLeft {
+  animation: outToLeft 0.25s both ease-in-out;
+  .vaux-menu-item, h3, .usa-search {
+    animation: outToLeft 0.25s both ease-in-out;
+  }
+}
+
+.animate-inFromLeft {
+  animation: inFromLeft 0.25s both ease-in-out;
+  .vaux-menu-item, h3, .usa-search {
+    animation: inFromLeft 0.25s both ease-in-out;
+  }
+}
+
+.animate-inFromRight {
+  animation: inFromRight 0.25s both ease-in-out;
+  .vaux-menu-item, h3, .usa-search {
+    animation: inFromRight 0.25s both ease-in-out;
+  }
+}

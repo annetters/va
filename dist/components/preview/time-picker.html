@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon.png">
+      <script src="https://use.fontawesome.com/73d8858120.js"></script>
+      <link rel="stylesheet" href="../../css/main.min.css">
+      <title>VA Pattern Library | Time Picker Component Preview</title>
+      <script src="http://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+
+    <div class="usa-grid" style="padding: 2em">
+      <div class="usa-width-one-whole">
+        <!-- SASS: src/stylesheets/_components/time-picker.scss -->
+<!-- JS: src/js/time-picker.js -->
+<!-- Vendor JS: src/js/_vendor/bootstrap-timepicker.js -->
+
+<fieldset>
+  <legend>Set a Time</legend>
+
+  <label for="startTime">Start Time</label>
+  <span class="usa-form-hint">For example: HH:MM AM/PM</span>
+  <!-- Timepicker input start -->
+  <div class="vaux-time-picker-input" data-timepicker-trigger>
+    <input id="startTime" name="startTime" type="text" aria-expanded="false"/>
+    <button class="usa-button" aria-label="Open Clock"><i class="fa fa-clock-o" aria-hidden="true"></i></button>
+  </div>
+  <!-- Timepicker input end -->
+</fieldset>
+
+<fieldset>
+
+  <label for="endTime">End Time</label>
+  <span class="usa-form-hint">For example: HH:MM AM/PM</span>
+  <!-- Timepicker input start -->
+  <div class="vaux-time-picker-input" data-timepicker-trigger>
+    <input id="endTime" name="endTime" type="text" aria-expanded="false"/>
+    <button class="usa-button" aria-label="Open Clock"><i class="fa fa-clock-o" aria-hidden="true"></i></button>
+  </div>
+  <!-- Timepicker input end -->
+</fieldset>
+
+<label for="lunchTime">Time of lunch</label>
+<span class="usa-form-hint">For example: HH:MM AM/PM</span>
+<input id="lunchTime" name="lunchTime" type="time">
+
+      </div>
+    </div>
+
+    <script src="../../js/_vendor/vendor.min.js"></script>
+    <script src="../../js/main.min.js"></script>
+  </body>
+</html>

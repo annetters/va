@@ -1,0 +1,240 @@
+/* ----------------------------- */
+/* 6x. Tables
+/* ----------------------------- */
+
+$table-arrow-color: $color-gray;
+$table-arrow-active-color: $color-primary;
+$table-border-row-color: $color-gray-lighter;
+$table-cell-text-color: $color-base;
+$table-head-th-color: $color-gray-lightest;
+
+.vaux-table {
+  th, td {
+    border-color: $table-border-row-color;
+    vertical-align: top;
+  }
+
+  thead th {
+    background-color: $table-head-th-color;
+  }
+
+  tbody td,
+  tbody th {
+    color: $table-cell-text-color;
+  }
+}
+
+.vaux-table--borderless {
+  thead tr {
+    background-color: transparent;
+    th {
+      border: 0;
+    }
+  }
+
+  th,
+  td {
+    border-left: 0;
+    border-right: 0;
+  }
+}
+
+.vaux-table--framed {
+  overflow: auto;
+  table {
+    table-layout: fixed;
+    min-width: 900px;
+  }
+}
+
+.vaux-table--sortable {
+  thead th {
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:after,
+    &[data-sorted-direction="descending"]:after{
+      color: $table-arrow-color;
+      content: $fa-angle-down;
+      display: inline;
+      font-family: FontAwesome;
+      font-size: 1.7rem;
+      font-style: normal;
+      font-weight: normal;
+      margin-left: 5px;
+    }
+
+    &[data-sorted-direction="ascending"]:after{
+      content: $fa-angle-up;
+      font-weight: normal;
+    }
+
+    &[data-sorted="true"]:after{
+      color: $table-arrow-active-color;
+      font-weight: 700;
+      -webkit-text-stroke: 1px $table-arrow-active-color;
+    }
+  }
+}
+
+/* Stacking table */
+/* Using .vaux-table is not required here, because it does not use the TABLE tag */
+.vaux-table--stacked {
+  box-sizing: border-box;
+  display: table;
+  margin: 0;
+  width: 100%;
+
+  .header-row {
+    background: $table-head-th-color;
+    font-weight: 700;
+  }
+
+  .row {
+    display: table-row;
+  }
+
+  .cell {
+    border-bottom: 1px solid #e5e5e5;
+    display: table-cell;
+    padding: 1.5rem;
+    text-align: left;
+
+    .sub-text {
+      display: block;
+    }
+  }
+
+  .primary {
+    text-align: left;
+  }
+
+  /* radios or checkboxes are required to open/close each row */
+  input[type="radio"],
+  input[type="checkbox"]{
+    display: none;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 760px)  {
+
+  .vaux-table--stacked {
+    display: block;
+    margin: 44px 0 0 0;
+
+    .row {
+      border: 3px $table-head-th-color solid;
+      display: block;
+      position: relative;
+
+      &+.row {
+        margin-bottom: 1rem
+      }
+    }
+
+    .header-row {
+      display: none;
+    }
+
+    .cell {
+      border: none;
+      display: block;
+      position: relative;
+      /* !! Use if you require a fixed height */
+      /* height: 45px; */
+      /* line-height: 45px; */
+      text-align: left;
+
+      .sub-text {
+        display: inline-block;
+        margin-left: .5rem;
+      }
+    }
+
+    /* All cells below the primary cell */
+    .cell:not(.primary) {
+      border-bottom: 1px solid $table-border-row-color;
+      margin: 0 1.5rem;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    .primary {
+      background: $table-head-th-color;
+      font-size: 1.7rem;
+      font-weight: 700;
+      padding: 1.5rem 3rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .cell:nth-of-type(n+2):before {
+      content: attr(data-label);
+      display: inline-block;
+      font-weight: 700;
+      margin-right: 2rem;
+      width: 100px;
+    }
+
+    /* ACCORDION */
+    /* CSS for only when you want the accordion effect */
+    &.vaux-table--accordion {
+
+      /* plus and minus icon */
+      .primary:before {
+        content: $fa-plus;
+        font-family: FontAwesome;
+        font-size: 1.7rem;
+        font-style: normal;
+        font-weight: normal;
+        margin-right: 1rem;
+        position: relative;
+        text-decoration: inherit;
+        z-index: 2;
+      }
+
+      /* hides cells below the Primary cell */
+      .cell:nth-of-type(n+2) {
+        display: none;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        display: block;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        width: 99%;
+        z-index: 1;
+      }
+
+      input[type="radio"]:checked {
+        z-index: -1; /* prevents radio from being clicked again if already open */
+      }
+
+      input[type="radio"]:checked ~ .cell,
+      input[type="checkbox"]:checked ~ .cell {
+        display: block;
+      }
+
+      /* icon when checked */
+      input[type="radio"]:checked ~ .primary:before,
+      input[type="checkbox"]:checked ~ .primary:before {
+        content: $fa-minus;
+      }
+    }
+  }
+}

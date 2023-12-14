@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon.png">
+      <script src="https://use.fontawesome.com/73d8858120.js"></script>
+      <link rel="stylesheet" href="../../css/main.min.css">
+      <title>VA Pattern Library | Text Area Component Preview</title>
+      <script src="http://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+
+    <div class="usa-grid" style="padding: 2em">
+      <div class="usa-width-one-whole">
+        <label for="input-type-textarea">Text area label</label>
+<textarea id="input-type-textarea" name="input-type-textarea"></textarea>
+
+<!-- Validation - Error -->
+<div class="usa-input-error">
+  <label class="usa-input-error-label" for="input-error">Text area input error</label>
+  <span class="usa-input-error-message" id="input-error-message" role="alert">Helpful error message</span>
+  <textarea id="input-error" name="input-error" aria-describedby="input-error-message"></textarea>
+</div>
+
+<!-- Validation - Success -->
+<label for="input-success">Text area input success</label>
+<textarea class="usa-input-success" id="input-success" name="input-success"></textarea>
+      </div>
+    </div>
+
+    <script src="../../js/_vendor/vendor.min.js"></script>
+    <script src="../../js/main.min.js"></script>
+  </body>
+</html>

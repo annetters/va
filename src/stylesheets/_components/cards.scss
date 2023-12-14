@@ -1,0 +1,143 @@
+/* ----------------------------- */
+/* 6f. Cards
+/* ----------------------------- */
+
+$card-bg-color: $color-primary;
+$card-hover-bg-color: $color-primary-darker;
+$card-text-color: $color-white;
+$card-update-text-color: $color-gray-lighter;
+
+/* Card Rows */
+.vaux-card-row {
+  
+  & + .vaux-card-row {
+    margin-top: 1rem;
+  }
+  
+ @include media($small-screen) {
+  .usa-width-one-third {
+    display: block;
+    float: none;
+    margin-right: 0;
+    width: auto;
+  }
+
+  .vaux-card {
+    margin-bottom: 1rem;
+  }
+  
+ }
+
+  @include media($tablet-screen) {
+    display: flex;
+
+    .usa-width-one-third {
+      align-items: stretch;
+      display: flex;
+      flex-direction: column; 
+      float: left;
+      margin-right: 2.35765%;
+      width: 30.11389%;
+
+      .vaux-card {
+        flex-grow: 1;
+        margin-bottom: 0;
+      }
+    }
+
+    & + .vaux-card-row {
+      margin-top: 2rem;
+    }
+  }
+}
+
+/* Cards */
+.vaux-card {
+  background-color: $card-bg-color;
+  border-radius: 0.3rem;
+  color: $card-text-color;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  margin-bottom: 10px;
+  padding: 2.1rem 3rem 2.5rem;
+}
+
+/* Linked card rules */
+a.vaux-card, a.vaux-card:visited {
+  background-color: $card-bg-color;
+  color: $card-text-color;
+  display: block;
+  position: relative;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $color-primary-darker;
+    color: $card-text-color;
+  }
+
+  &:after {
+    content: $fa-angle-right;
+    font-family: FontAwesome;
+    font-size: 2.7rem;
+    font-weight: 900;
+    position: absolute;
+    right: 2rem;
+    top: 40%;
+  }
+}
+
+.vaux-card-title {
+  font-size: 2.4rem;
+  margin-top: 0;
+}
+
+.vaux-card-content {
+  /* Links within the cards content */
+  a {
+    color: inherit;
+    &:hover {
+      color: darken($card-text-color, 15%);
+    }
+  }
+
+  .vaux-link {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :nth-last-child(-n + 1) {
+    margin-bottom: 0;
+  }
+}
+
+/* Stat Cards */
+.vaux-card--stat {
+
+  &.vaux-card--stat-static {
+    &:after {
+      content: '';
+    }
+  }
+
+  .vaux-card-title {
+    font-size: 1.9rem;
+    line-height: 1.63;
+    margin-bottom: 0;
+  }
+
+  .card-stat {
+    span:first-of-type {
+      font-size: 3.4rem;
+      font-weight: bold;
+      line-height: 1.29;
+    }
+    span:last-of-type {
+      font-size: 2.4rem;
+    }
+  }
+
+  .card-stat-updated {
+    color: $card-update-text-color;
+    line-height: 1.82;
+    margin-top: 0;
+  }
+}

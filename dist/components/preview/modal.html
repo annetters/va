@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon.png">
+      <script src="https://use.fontawesome.com/73d8858120.js"></script>
+      <link rel="stylesheet" href="../../css/main.min.css">
+      <title>VA Pattern Library | Modal Component Preview</title>
+      <script src="http://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+
+    <div class="usa-grid" style="padding: 2em">
+      <div class="usa-width-one-whole">
+        <!-- SASS: src/stylesheets/_components/modal.scss -->
+<!-- JS: src/js/modal.js -->
+
+<button data-modal-trigger data-attr="modalBasic" data-modal-type="basic">Open Basic Modal</button>
+
+<!-- Begin Modal -->
+<div id="modalBasic" class="vaux-modal" role="dialog" aria-hidden="true" tabindex="-1" aria-labelledby="basicModalTitle">
+  <div class="vaux-modal-header">
+    <button class="usa-nav-close vaux-modal-close">Close</button>
+    <h3 id="basicModalTitle">Modal Title</h3>
+  </div>
+  <div class="vaux-modal-content">
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.</p>
+    <a href="http://www.google.com" target="_blank">Link inside modal</a>
+  </div>
+  <div class="vaux-modal-footer">
+    <button type="button">Agree</button>
+    <button class="usa-button-outline" type="button">Disagree</button>
+  </div>
+</div>
+<!-- End Modal -->
+
+
+      </div>
+    </div>
+
+    <script src="../../js/_vendor/vendor.min.js"></script>
+    <script src="../../js/main.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+/* ----------------------------- */
+/* 4d. Separators
+/* ----------------------------- */
+
+.vaux-separator--stars {
+  background: url('#{$vaux-img-path}stars.png') no-repeat center center;
+  background-size: 11rem auto;
+  display: flex;
+  justify-content: center;
+  margin: 1.6rem auto auto;
+  padding: 2rem 0 0;
+  text-align: center;
+
+  &.vaux-h-ruled--stars {
+    &:before,
+    &:after {
+      border-top: $vaux-border;
+      content: "";
+      display: flex;
+      flex-direction: row;
+      flex: 1 1 50%;
+      height: 1px;
+      padding: 1rem 0;
+    }
+
+    /* creates the white BG gap */
+    &:before {
+      margin-right: 12rem;
+    }
+  } 
+}
+
+@media screen and (min-width: $tablet-screen) {
+  &.vaux-h-ruled--stars {
+    padding-left: 0;
+  }
+}
+
+.heading-border-top {
+  border-top: 2px solid $color-gray-light;
+  margin-top: 1.5em;
+  padding: 1em 0;
+}

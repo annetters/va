@@ -1,0 +1,29 @@
+
+
+<!-- SASS: src/stylesheets/_components/file-upload.scss -->
+<!-- JS: src/js/file-upload.js -->
+
+<form class="usa-form-large">
+  <fieldset>
+    <legend>File Upload</legend>
+    <span>Files must be in .pdf format and less than 2 MB.</span>
+
+    <!-- Start File Upload Input -->
+    <div class="vaux-file-upload-wrapper" data-file-upload-trigger>
+      <label for="fileUpload">
+        <span class="usa-button" role="button" tabindex="0">Choose file(s)</span>
+      </label>
+      <input type="file" name="filesToUpload[]" id="fileUpload" multiple="">
+      
+      <div class="vaux-file-list-wrapper hidden">
+        <h5>Uploads</h5>
+
+        <ul class="vaux-file-list">
+        </ul>
+      </div>
+
+    </div>
+    <!-- End File Upload Input -->
+    
+  </fieldset>
+</form>
