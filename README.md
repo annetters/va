@@ -4,7 +4,8 @@ This component library for Veterans Affairs is intended to encourage consistent,
 
 The VA Pattern Library is currently at the following URL:
 
-[Production URL](#)
+
+[Live URL](https://design.va.gov/components/)
 
 
 ## Resources
