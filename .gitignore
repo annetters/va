@@ -1,0 +1,8 @@
+node_modules
+dist
+npm-debug.log
+src/public/css
+src/public/js
+src/assets/css
+src/assets/js
+.idea/
